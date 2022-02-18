@@ -6,11 +6,12 @@ class UserModel {
   insertUsers(createParams) {
     const id = uuid.v4();
     const user = { id, ...createParams };
-
+    console.log("Create user");
     users.push(user);
     return user;
   }
   findUsers() {
+    console.log("All users");
     return users;
   }
   findUserById(id) {
